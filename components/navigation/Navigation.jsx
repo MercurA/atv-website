@@ -19,7 +19,7 @@ const Navigation = ({handleMenuClick}) => {
     }
 
     return (
-        <NavContainer>
+        <NavContainer data-testid={'menu'}>
             <NavItemContainer isPageWide={isPageWide}>
                 {renderMenuItems()}
             </NavItemContainer>
