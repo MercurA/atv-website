@@ -1,0 +1,26 @@
+@import '../../constants/fonts.scss';
+
+.container {
+    color: black;
+    font-family: $font_spartan;
+    height: 400px;
+    width: 300px;
+    box-shadow: -2px -3px 10px 2px;
+    padding: 10px;
+
+    .imageContainer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .description {
+        padding-top: 10px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .listContainer {
+        padding-top: 10px;
+        font-size: 14px;
+    }
+}

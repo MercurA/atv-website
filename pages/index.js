@@ -1,10 +1,20 @@
-import Navigation from '../components/navigation/Navigation'
-import styles from '../styles/Home.module.css'
+import Card from "../components/cards/Card"
 
-export default function Home() {
+const DATA = {
+  path: "/images/atv_1.jpeg" ,
+  descriptions: {
+    year: '2010',
+    model: 'XC0123'
+  },
+  list: ['a', 'b', 'c']
+}
+
+const MainPage = () => {
   return (
     <div>
-      <Navigation />  
+      <Card path={DATA.path} descriptions={DATA.descriptions} list={DATA.list}/>
     </div>
   )
 }
+
+export default MainPage
