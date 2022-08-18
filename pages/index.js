@@ -1,4 +1,3 @@
-import Card from "../components/cards/Card"
 
 const DATA = {
   path: "/images/atv_1.jpeg" ,
@@ -11,8 +10,7 @@ const DATA = {
 
 const MainPage = () => {
   return (
-    <div>
-      <Card path={DATA.path} descriptions={DATA.descriptions} list={DATA.list}/>
+    <div style={{height: '100vh'}}>      
     </div>
   )
 }

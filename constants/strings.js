@@ -4,4 +4,4 @@ const strings_RO = {
     cardListTitle: 'ATV-ul este dotat cu urmatoarele:'
 }
 
-export default strings;
+export default strings_RO;
