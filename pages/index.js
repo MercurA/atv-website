@@ -1,3 +1,6 @@
+import LargeCard from "../components/cards/LargeCard"
+import TextComponent from "../components/textComponents/TextComponent"
+import strings_RO from "../constants/strings"
 
 const DATA = {
   path: "/images/atv_1.jpeg" ,
@@ -8,9 +11,15 @@ const DATA = {
   list: ['a', 'b', 'c']
 }
 
+const mainStyle = {
+  height: '100vh', 
+  padding: '120px 20px 0px 20px'
+}
+
 const MainPage = () => {
   return (
-    <div style={{height: '100vh'}}>      
+    <div style={mainStyle}>
+      <LargeCard images={['/images/atv.png', '/images/troti.png']} component={<TextComponent text={strings_RO.largeCardText_1} title='Trotineta este dotata cu urmatoarele' list={['a','b','c']}/>}/>  
     </div>
   )
 }
