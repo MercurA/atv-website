@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 
-const LargeCard = ({images=[], component}, hasBg=false) => {
+const LargeCard = ({images=[], component ,hasBg=false} ) => {
     const [hasImage, setHasImage] = useState(false)
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const LargeCard = ({images=[], component}, hasBg=false) => {
     }
 
     return (
-        <div className={styles.cardContainerNoBg}>
+        <div className={`${styles.cardContainerNoBg} ${hasBg && styles.backgroundYellow}` }>
             <div className={styles.descriptionHalf}>
                 {component && component}
             </div>

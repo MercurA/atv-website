@@ -1,6 +1,7 @@
 import LargeCard from "../components/cards/LargeCard"
 import TextComponent from "../components/textComponents/TextComponent"
 import strings_RO from "../constants/strings"
+import styles from './styles.module.scss'
 
 const DATA = {
   path: "/images/atv_1.jpeg" ,
@@ -17,9 +18,24 @@ const mainStyle = {
 }
 
 const MainPage = () => {
+
   return (
-    <div style={mainStyle}>
-      <LargeCard images={['/images/atv.png', '/images/troti.png']} component={<TextComponent text={strings_RO.largeCardText_1} title='Trotineta este dotata cu urmatoarele' list={['a','b','c']}/>}/>  
+    <div className={styles.mainContainer}>
+      <LargeCard 
+        images={['/images/atv.png', '/images/troti.png']} 
+        component={<TextComponent text={strings_RO.largeCardText_1} title={strings_RO.largeCardText_title_list_1[0]} list={['a','b','c']}/>}
+        />  
+      <div className={styles.sectionTitle}>{strings_RO.section_scooters}</div>
+      <LargeCard 
+        images={['/images/troti1.png']}
+        hasBg={true}
+        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
+      />
+      {/* <div className={styles.sectionTitle}>{strings_RO.section_scooters}</div>
+      <LargeCard 
+        images={['/images/troti1.png']}
+        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
+      />  */}
     </div>
   )
 }

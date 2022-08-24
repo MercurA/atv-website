@@ -1,0 +1,15 @@
+.mainContainer {
+    height: 100vh;
+    padding: 130px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 425px) {
+        padding: 180px 20px 0px 20px;;
+    }
+
+.sectionTitle {
+    margin-bottom: 15px;
+}
+
+}
