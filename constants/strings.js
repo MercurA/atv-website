@@ -13,7 +13,16 @@ const strings_RO = {
     section_scooters: 'Trotinete electrice',
     section_services: 'Servicii',
     section_rules: 'Reguli de bun simt',
-    section_contact: 'Contacteaza-ne'
+    section_contact: 'Contacteaza-ne',
+    input: {
+        name: 'Nume',
+        email: 'Email',
+        noTelephone: 'Nr. de telefon',
+        resDate: 'Data rezervarii',
+        vehicle: 'Vehicul rezervat',
+        message: 'Mesaj'
+    }
+
 }
 
 export default strings_RO;
