@@ -3,16 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-const MENU_ITEMS = [
-  "Despre Noi",
-  "ATV-uri",
-  "Trotinete electrice",
-  "Servicii",
-  "Reguli de bun simt",
-  "Contacteaza-ne",
-];
 
-const Menu = ({ children }) => {
+const Menu = () => {
   const router = useRouter();
   const [menuState, setMenuState] = useState([
     {
