@@ -1,3 +1,5 @@
+import Link from "next/link"
+import { useRef } from "react"
 import LargeCard from "../components/cards/LargeCard"
 import TextComponent from "../components/textComponents/TextComponent"
 import strings_RO from "../constants/strings"
@@ -21,21 +23,37 @@ const MainPage = () => {
 
   return (
     <div className={styles.mainContainer}>
+      <div id={'section_1'} >Section 1</div>
       <LargeCard 
         images={['/images/atv.png', '/images/troti.png']} 
         component={<TextComponent text={strings_RO.largeCardText_1} title={strings_RO.largeCardText_title_list_1[0]} list={['a','b','c']}/>}
         />  
-      <div className={styles.sectionTitle}>{strings_RO.section_scooters}</div>
+      <div  id={'section_2'} >Section 1</div>
       <LargeCard 
         images={['/images/troti1.png']}
         hasBg={true}
         component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
       />
-      {/* <div className={styles.sectionTitle}>{strings_RO.section_scooters}</div>
+      <div id={'section_3'} >Section 3</div>
       <LargeCard 
         images={['/images/troti1.png']}
         component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
-      />  */}
+      /> 
+        <div id={'section_4'} >Section 3</div>
+      <LargeCard 
+        images={['/images/troti1.png']}
+        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
+      /> 
+        <div id={'section_5'} >Section 3</div>
+      <LargeCard 
+        images={['/images/troti1.png']}
+        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
+      /> 
+        <div id={'section_6'} >Section 3</div>
+      <LargeCard 
+        images={['/images/troti1.png']}
+        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
+      /> 
     </div>
   )
 }

@@ -1,78 +1,108 @@
-import styles from './styles.module.scss'
-import {useState} from 'react'
-import Image from 'next/image'
+import styles from "./styles.module.scss";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+const MENU_ITEMS = [
+  "Despre Noi",
+  "ATV-uri",
+  "Trotinete electrice",
+  "Servicii",
+  "Reguli de bun simt",
+  "Contacteaza-ne",
+];
 
-const MENU_ITEMS = ['Despre Noi', 'ATV-uri', 'Trotinete electrice', 'Servicii', 'Reguli de bun simt', 'Contacteaza-ne']
+const Menu = ({ children }) => {
+  const router = useRouter();
+  const [menuState, setMenuState] = useState([
+    {
+      name: "Despre Noi",
+      id: "/#section_1",
+      hasLine: false,
+    },
+    {
+      name: "ATV-uri",
+      id: "/#section_2",
+      hasLine: false,
+    },
+    {
+      name: "Trotinete electrice",
+      id: "/#section_3",
+      hasLine: false,
+    },
+    {
+      name: "Servicii",
+      id: "/#section_4",
+      hasLine: false,
+    },
+    {
+      name: "Reguli de bun simt",
+      id: "/#section_5",
+      hasLine: false,
+    },
+    {
+      name: "Contacteaza-ne",
+      id: "/#section_6",
+      hasLine: false,
+    },
+  ]);
 
-const Menu = ({children}) => {
-    const [hovered, setIfHovered] = useState(false)
-    const [menuState, setMenuState] = useState([
-        {
-            name: 'Despre Noi',
-            hasLine: false
-        },
-        {
-            name: 'ATV-uri',
-            hasLine: false
-        },
-        {
-            name: 'Trotinete electrice',
-            hasLine: false
-        },
-        {
-            name: 'Servicii',
-            hasLine: false
-        },
-        {
-            name: 'Reguli de bun simt',
-            hasLine: false
-        },
-        {
-            name: 'Contacteaza-ne',
-            hasLine: false
-        }
-    ])
+  const formatMenuStateArray = (menuItems, target, bool) => {
+    const menuArray = [...menuItems];
 
-    const formatMenuStateArray = (menuItems, target, bool) => {
-        const menuArray = [...menuItems]
+    return menuArray.map((item, index) => {
+      if (index === target) {
+        return { ...item, hasLine: bool };
+      }
+      return item;
+    });
+  };
 
-        return menuArray.map((item, index) => {
-            if(index === target) {
-                return {...item, hasLine: bool}
-            }
-            return item;
-        })
-    }
+  const handleHoverItem = (e) => {
+    const menuIndex = e.target.id && Number(e.target.id.split("_")[1]);
 
-    const handleHoverItem = (e) => {
-        const menuIndex = e.target.id && Number(e.target.id.split('_')[1])
-        
-        setMenuState(formatMenuStateArray(menuState, menuIndex, true))
-    }
+    setMenuState(formatMenuStateArray(menuState, menuIndex, true));
+  };
 
-    const handleHoverLeave = (e) => {
-        const menuIndex = e.target.id && Number(e.target.id.split('_')[1])
-     
-        setMenuState(formatMenuStateArray(menuState, menuIndex, false))
-    }
+  const handleHoverLeave = (e) => {
+    const menuIndex = e.target.id && Number(e.target.id.split("_")[1]);
 
-    const renderMenuItems = () => {
-        return menuState.map((item, index) => (
-            <div id={`item_${index}`} key={index} className={styles.menuItem} onMouseOver={handleHoverItem} onMouseLeave={handleHoverLeave}>
-                {item.name}
-                {item.hasLine && <div className={styles.line}></div>}
-            </div>
-        ))
-    }
+    setMenuState(formatMenuStateArray(menuState, menuIndex, false));
+  };
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.logo}>
-                <Image src={"/images/logo.png"} height={80} width={80}/>
-            </div>
-            {renderMenuItems()}
-        </div>
-    )
-}
+  const handleClick = (e, id) => {
+      e.preventDefault()
+      router.push(id)
+  };
 
-export default Menu
+  const renderMenuItems = () => {
+    return menuState.map((item, index) => (
+      <Link href={item.id} key={index+1} passHref> 
+        <a > 
+          <div
+            id={`item_${index}`}
+            key={index}
+            className={styles.menuItem}
+            onMouseOver={handleHoverItem}
+            onMouseLeave={handleHoverLeave}
+            onClick={(e) => handleClick(e, item.id)}
+          >
+            {item.name}
+            {item.hasLine && <div className={styles.line}></div>}
+          </div>
+        </a>
+      </Link>
+    ));
+  };
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.logo}>
+        <Image src={"/images/logo.png"} height={80} width={80} />
+      </div>
+      {renderMenuItems()}
+    </div>
+  );
+};
+
+export default Menu;
