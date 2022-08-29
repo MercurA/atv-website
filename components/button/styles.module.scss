@@ -1,0 +1,14 @@
+@import '../../constants/colors.scss';
+@import '../../constants/fonts.scss';
+
+.btnContainer {
+    width: 500px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: lightgray;
+    font-family: $font-spartan;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

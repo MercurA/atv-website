@@ -1,0 +1,26 @@
+@import '../../constants/colors';
+@import '../../constants/fonts.scss';
+
+.formContainer {
+    width: 100%;
+    font-family: $font-spartan;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: $brand-yellow;
+    padding: 0 50px;
+    .description {
+        width: 600px;
+        line-height: 1.5;
+        font-weight: 600;
+        .descItems {
+            margin-bottom: 20px;
+        }
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+}

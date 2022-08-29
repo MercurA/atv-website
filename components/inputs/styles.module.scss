@@ -5,7 +5,7 @@
 .inputContainer {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 500px;
     height: 80px;
     font-family: $font_spartan;
     .label {
@@ -27,11 +27,61 @@
 
 // Textarea.jsx
 .container {
-    width: 300px;
+    width: 500px;
     display: flex;
     flex-direction: column;
 
     & > textarea {
         height: 100px;   
     }
+
+    .label {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+
+//Dropdown.jsx
+.dropContainer {
+    width: 500px;
+    height: 40px;
+    border: 1px solid lightgray;
+    background-color: white;
+    font-family: $font_spartan;
+    font-weight: 600;
+   .select{
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        font-family: $font_spartan;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        cursor: pointer;
+
+   }
+   .menu{
+        background-color: white;
+        font-family: $font_spartan;
+        font-weight: 600;
+        width: 500px;
+        height: 80px;
+        position: absolute;
+        & > div {
+            display: flex;
+            align-items: center;
+            height: 50%;
+            width: 100%;
+            cursor: pointer;
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+   }
+}
+
+.yellow {
+    color: $brand_yellow
 }

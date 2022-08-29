@@ -20,8 +20,11 @@ const strings_RO = {
         noTelephone: 'Nr. de telefon',
         resDate: 'Data rezervarii',
         vehicle: 'Vehicul rezervat',
-        message: 'Mesaj'
-    }
+        message: 'Mesaj',
+        helpDescriptionTitle: 'Cum te pot ajuta?',
+        helpDescriptionText: 'Pentru a stabili detaliile unei rezervari, pentru a-ti da mai multe detalii despre un traseu, pentru a afla care sunt costurile unei inchirieri de ATV/trotineta,pentru a afla detalii despre disponibilitatea ATV-urilor/trotinetelor noastre, pentru a te informa care este politica de confidentialitate, pentru a-ti prezenta care sunt termenii ci conditiile noastre sau un simplu “Salut”, trimite-ne un mesaj.'
+    },
+    send: 'Trimite'
 
 }
 

@@ -21,6 +21,10 @@
 .container{
     height: 100vh;
     padding: 130px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 //Conditions.jsx

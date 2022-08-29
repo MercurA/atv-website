@@ -1,10 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 
-const DynamicHeader = dynamic(() => import('react-leaflet'), {
-  ssr: false,
-})
 class MyDocument extends Document {
   render() {
     return (
@@ -13,7 +8,6 @@ class MyDocument extends Document {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;600&display=swap" rel="stylesheet" />
-        <DynamicHeader />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
           integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
           crossOrigin=""/>
