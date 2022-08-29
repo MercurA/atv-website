@@ -34,26 +34,6 @@ const MainPage = () => {
         hasBg={true}
         component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
       />
-      <div id={'section_3'} >Section 3</div>
-      <LargeCard 
-        images={['/images/troti1.png']}
-        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
-      /> 
-        <div id={'section_4'} >Section 3</div>
-      <LargeCard 
-        images={['/images/troti1.png']}
-        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
-      /> 
-        <div id={'section_5'} >Section 3</div>
-      <LargeCard 
-        images={['/images/troti1.png']}
-        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
-      /> 
-        <div id={'section_6'} >Section 3</div>
-      <LargeCard 
-        images={['/images/troti1.png']}
-        component={<TextComponent text={strings_RO.largeCardText_1} title='An de fabricatie trotineta: 2010 Model ATV: XC0123' list={['a','b','c']}/>}
-      /> 
     </div>
   )
 }

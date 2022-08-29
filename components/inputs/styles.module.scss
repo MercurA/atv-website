@@ -26,3 +26,12 @@
 }
 
 // Textarea.jsx
+.container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    & > textarea {
+        height: 100px;   
+    }
+}

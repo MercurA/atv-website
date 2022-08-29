@@ -1,8 +1,8 @@
-import styles from './styles.module.scss'
+import styles from './sm_styles.module.scss'
 import Image from 'next/image'
 import strings from '../../constants/strings'
 
-const Card = ({descriptions={}, path, list=[]}) => {
+const SmallCard = ({descriptions={}, path, list=[]}) => {
 
     const renderDescList = () => {
         return list.map((item, index) => (
@@ -33,4 +33,4 @@ const Card = ({descriptions={}, path, list=[]}) => {
     )
 }
 
-export default Card
+export default SmallCard

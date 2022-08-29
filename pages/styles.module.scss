@@ -1,3 +1,4 @@
+@import '../constants/fonts.scss';
 
 //index.js
 .mainContainer {
@@ -20,4 +21,16 @@
 .container{
     height: 100vh;
     padding: 130px 20px 0px 20px;
+}
+
+//Conditions.jsx
+.condContainer {
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 130px 80px 0px 80px;
+    font-family: $font-spartan;
+    line-height: 1.5;
+    .title {
+        text-align: center;
+    }
 }
