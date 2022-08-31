@@ -114,9 +114,9 @@ const Menu = () => {
 
 const renderMobileMenu = () => {
   return (
-    <div className={styles.mobileContainer}>
+    <div className={styles.mobileContainer} >
       <Link href={'/'}>
-        <div className={styles.logo}>
+        <div className={styles.logo} onClick={handleCloseMenu}>
             <Image src={"/images/logo.png"} height={80} width={80} />
         </div>
       </Link>

@@ -86,7 +86,7 @@
         top:80px;
         background-color: white;
         z-index: 999;
-        animation: openMenu .4s;
+        animation: openMenu .2s;
         animation-fill-mode: forwards;
         display: flex;
         flex-direction: column;
@@ -95,6 +95,11 @@
         line-height: 7;
         font-family: $font_spartan;
         font-weight: 600;
+
+        .menuItem {
+            animation: showList .2s;
+            animation-fill-mode: forwards;
+        }
     }
 
     .closeMenu {
@@ -103,11 +108,20 @@
         top:80px;
         background-color: white;
         z-index: 999;
-        animation: closeMenu .4s;
+        animation: closeMenu .2s;
         animation-fill-mode: forwards;
     }
 }
 
+
+@keyframes showList {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 @keyframes openMenu {
     0% {
