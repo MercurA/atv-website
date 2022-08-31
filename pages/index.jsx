@@ -1,5 +1,3 @@
-import Link from "next/link"
-import { useRef } from "react"
 import LargeCard from "../components/cards/LargeCard"
 import TextComponent from "../components/textComponents/TextComponent"
 import strings_RO from "../constants/strings"
@@ -12,11 +10,6 @@ const DATA = {
     model: 'XC0123'
   },
   list: ['a', 'b', 'c']
-}
-
-const mainStyle = {
-  height: '100vh', 
-  padding: '120px 20px 0px 20px'
 }
 
 const MainPage = () => {

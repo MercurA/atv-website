@@ -13,7 +13,7 @@ const LargeCard = ({images=[], component ,hasBg=false} ) => {
 
     const renderImages = () => {
         return hasImage && images.map((imagePath, index) => {
-            return (<div className={styles.imageItem}>
+            return (<div className={styles.imageItem} key={index}>
                 <Image key={index} src={imagePath} layout={'fill'} objectFit='cover' objectPosition="left"/>
             </div>)
                 
