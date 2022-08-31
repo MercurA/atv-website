@@ -34,7 +34,7 @@ const Menu = () => {
     },
     {
       name: "Contacteaza-ne",
-      id: "/#section_6",
+      id: "/contacts",
       hasLine: false,
     },
   ]);

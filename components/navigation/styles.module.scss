@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     background-color: white;
-    z-index: 1;
+    z-index: 999;
     .menuItem {
         font-family: $font_spartan;
         font-weight: 600;
