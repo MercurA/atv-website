@@ -29,8 +29,9 @@ const Footer = () => {
         )
     }
 
-    const renderMenuType = (isMobile) => {
-        if(isMobile) {
+    const renderMenuType = (isMobile, isBrowser) => {
+        console.log(isMobile && !isBrowser)
+        if(isMobile && !isBrowser) {
             return renderMobileFooter()
         } else {
             return renderDesktopFooter()
@@ -39,7 +40,7 @@ const Footer = () => {
 
     return (
         <Device>
-            {(isMobile) => renderMenuType(isMobile)}
+            {({isMobile, isBrowser}) => renderMenuType(isMobile, isBrowser)}
         </Device>
 
     )

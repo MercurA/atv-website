@@ -16,6 +16,20 @@
     margin-bottom: 15px;
 }
 
+.label {
+    font-family: $font-spartan;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.atvList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 }
 
 // Contacts.jsx
