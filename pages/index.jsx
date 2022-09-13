@@ -35,9 +35,11 @@ const MainPage = () => {
         {section_atv}
       </div>
       <div className={styles.atvList}>
-        {atv_list.map((item, index) => (
-          <SmallCard atv={item} index={index}/>
-        ))}
+        {/* <div className={styles.horizontalScroll}> */}
+          {atv_list.map((item, index) => (
+            <SmallCard atv={item} index={index}/>
+          ))}
+        {/* </div> */}
       </div>
       <div className={styles.label} id={"trotinete-electrice"}>
         {section_scooters}
@@ -71,12 +73,11 @@ const MainPage = () => {
         {section_rules}
       </div>
       <LargeCard
-        images={["/images/troti1.png"]}
         hasBg={false}
         component={
           <TextComponent
             text={largeCardText_1}
-            title="An de fabricatie trotineta: 2010 Model ATV: XC0123"
+            title={strings_RO.section_rules}
             list={["a", "b", "c"]}
           />
         }

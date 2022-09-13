@@ -2,7 +2,7 @@
 
 //index.js
 .mainContainer {
-    height: 100vh;
+    height: calc(100vh - 30px);
     padding: 130px 20px 0px 20px;
     display: flex;
     flex-direction: column;
@@ -11,6 +11,14 @@
     @media only screen and (max-width: 425px) {
         padding: 180px 20px 0px 20px;;
     }
+
+.horizontalScroll {
+    display: flex;
+    flex-direction: row;
+    width: 1238px;
+    overflow-x: auto;
+    justify-content: space-between;
+}
 
 .sectionTitle {
     margin-bottom: 15px;

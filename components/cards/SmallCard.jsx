@@ -1,7 +1,5 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import strings from "../../constants/strings";
-import strings_RO from "../../constants/strings";
 
 const SmallCard = ({atv={}, index }) => {
   const {title, subTitle, list, path} = atv

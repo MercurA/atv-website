@@ -12,27 +12,27 @@ const Menu = () => {
   const [menuState, setMenuState] = useState([
     {
       name: "Despre Noi",
-      id: "/#section_1",
+      id: "/#despre-noi",
       hasLine: false,
     },
     {
       name: "ATV-uri",
-      id: "/#section_2",
+      id: "/#atv-uri",
       hasLine: false,
     },
     {
       name: "Trotinete electrice",
-      id: "/#section_3",
+      id: "/#trotinete-electrice",
       hasLine: false,
     },
     {
       name: "Servicii",
-      id: "/#section_4",
+      id: "/#sservicii",
       hasLine: false,
     },
     {
       name: "Reguli de bun simt",
-      id: "/#section_5",
+      id: "/#reguli-de-bun-simt",
       hasLine: false,
     },
     {
