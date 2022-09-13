@@ -1,9 +1,21 @@
 import styles from './styles.module.scss'
 
-const TextComponent = ({text, list=[], title}) => {
+const TextComponent = ({text='' || [], list=[], title=''}) => {
+
+    const renderText = () => {
+        if(text instanceof Array) {
+            return text.map((el, index) => (
+                <div key={index}>{el}</div>
+            ))
+        } else {
+            return text
+        }
+
+        console.log(text.length )
+    }
     return (
         <div className={styles.container}>
-            {text}
+            {renderText()}
             {list.length > 0 &&
                 <>
                     <div className={styles.title}>{title}</div>

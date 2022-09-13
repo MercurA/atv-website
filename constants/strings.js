@@ -46,7 +46,15 @@ const strings_RO = {
             path: '/images/atv_2.jpeg'
         }
     ],
-
+    sevices: {
+        title: ['Inchiriere ATV - 250lei/h', 'Inchiriere Trotineta electrinca - 60lei/h', 'Training de siguranta si utilizare', 'Echipament : casca, vesta reflectorizanta.'],
+        subTitle: 'Recomandari Trasee/Zone',
+        list: ['Trasee ATV: Colibita/Fantanele', 'Trasee trotineta: Bargau']
+    },
+    rules: {
+        title: 'Ce am de luat in vedere cand inchiriez un dispozitiv?',
+        list: ['ATV-ul/trotineta electrica sunt in perfecta stare de functionare si va rugam sa le returnati in aceeasi stare', 'Aveti grija de natura/mediul inconjurator atunci cand folositi unul din dispozitivele noastre', 'Nu distrugeti natura/dispozitivul inchiriat', 'Fiti atenti unde parcati dispozitivul inchiriat (nu-l lasati in zone interzise)', 'Fiti atenti cum folositi dispozitivul inchiriat si tineti cont de trainingul facut la inceput', 'Daca dispozitivul inchiriat nu mai functioneaza corespunzator, va rugam sa ne contactati', 'Returnati dispozitivul in locul din care a fost luat initial']
+    }
 }
 
 export default strings_RO;

@@ -14,6 +14,8 @@ const MainPage = () => {
     section_scooters,
     section_services,
     section_rules,
+    rules,
+    sevices
  } = strings_RO;
 
   return (
@@ -26,8 +28,6 @@ const MainPage = () => {
         component={
           <TextComponent
             text={largeCardText_1}
-            title={largeCardText_title_list_1[0]}
-            list={["a", "b", "c"]}
           />
         }
       />
@@ -57,13 +57,12 @@ const MainPage = () => {
         {section_services}
       </div>
       <LargeCard
-        images={["/images/troti1.png"]}
         hasBg={true}
         component={
           <TextComponent
-            text={largeCardText_1}
-            title="An de fabricatie trotineta: 2010 Model ATV: XC0123"
-            list={["a", "b", "c"]}
+            text={sevices.title}
+            title={sevices.subTitle}
+            list={sevices.list}
           />
         }
       />
@@ -71,13 +70,11 @@ const MainPage = () => {
         {section_rules}
       </div>
       <LargeCard
-        images={["/images/troti1.png"]}
         hasBg={false}
         component={
           <TextComponent
-            text={largeCardText_1}
-            title="An de fabricatie trotineta: 2010 Model ATV: XC0123"
-            list={["a", "b", "c"]}
+            title={rules.title}
+            list={rules.list}
           />
         }
       />
