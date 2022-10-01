@@ -11,6 +11,7 @@
     background-color: white;
     z-index: 999;
     box-shadow: 0px 0px 12px -5px;
+    height: 80px;
 
     .menuItem {
         font-family: $font_spartan;
@@ -37,6 +38,30 @@
         @media only screen and (max-width: 768px) {
             margin-left: 20px;
         }
+    }
+
+    .devider {
+        height: 50px;
+        border-left: 1px solid black;
+        width: 42px;
+        position: relative;
+        top: -20px;
+        left: 20px;
+    }
+
+    .langSwitch {
+        display: flex;
+        position: relative;
+        font-family: $font_spartan;
+    }
+
+    .brandColor {
+        color: $brand_yellow;
+        font-weight: 700;
+    }
+
+    .default {
+        color: #000000
     }
 
     .logo {

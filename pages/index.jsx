@@ -1,10 +1,12 @@
+import { useContext } from "react";
 import LargeCard from "../components/cards/LargeCard";
 import SmallCard from "../components/cards/SmallCard";
 import TextComponent from "../components/textComponents/TextComponent";
-import strings_RO from "../constants/strings";
 import styles from "./styles.module.scss";
+import { LanguageContext } from "./_app";
 
 const MainPage = () => {
+  const {currentLang, setLang} = useContext(LanguageContext)
   const {
     atv_list,
     section_about,
@@ -14,7 +16,9 @@ const MainPage = () => {
     section_scooters,
     section_services,
     section_rules,
- } = strings_RO;
+    rules,
+    sevices
+ } = currentLang;
 
   return (
     <div className={styles.mainContainer}>
@@ -26,8 +30,6 @@ const MainPage = () => {
         component={
           <TextComponent
             text={largeCardText_1}
-            title={largeCardText_title_list_1[0]}
-            list={["a", "b", "c"]}
           />
         }
       />
@@ -59,13 +61,12 @@ const MainPage = () => {
         {section_services}
       </div>
       <LargeCard
-        images={["/images/troti1.png"]}
         hasBg={true}
         component={
           <TextComponent
-            text={largeCardText_1}
-            title="An de fabricatie trotineta: 2010 Model ATV: XC0123"
-            list={["a", "b", "c"]}
+            text={sevices.title}
+            title={sevices.subTitle}
+            list={sevices.list}
           />
         }
       />
@@ -76,9 +77,8 @@ const MainPage = () => {
         hasBg={false}
         component={
           <TextComponent
-            text={largeCardText_1}
-            title={strings_RO.section_rules}
-            list={["a", "b", "c"]}
+            title={rules.title}
+            list={rules.list}
           />
         }
       />

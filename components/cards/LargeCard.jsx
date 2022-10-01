@@ -21,7 +21,7 @@ const LargeCard = ({images=[], component ,hasBg=false} ) => {
     }
 
     return (
-        <div className={`${styles.cardContainerNoBg} ${hasBg && styles.backgroundYellow}` }>
+        <div className={`${styles.cardContainer} ${hasBg && styles.backgroundYellow}` }>
             <div className={styles.descriptionHalf}>
                 {component && component}
             </div>

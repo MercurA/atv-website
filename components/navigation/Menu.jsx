@@ -1,47 +1,81 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
 import styles from "./styles.module.scss";
 import Device from "../../utils/index";
+import { LanguageContext } from "../../pages/_app";
 
 const Menu = () => {
+  const {currentLang, setLang, lang} = useContext(LanguageContext)
   const router = useRouter();
   const [open, setOpen] = useState(false)
   const [menuState, setMenuState] = useState([
     {
-      name: "Despre Noi",
+      name: currentLang.section_about,
       id: "/#despre-noi",
       hasLine: false,
     },
     {
-      name: "ATV-uri",
+      name: currentLang.section_atv,
       id: "/#atv-uri",
       hasLine: false,
     },
     {
-      name: "Trotinete electrice",
+      name: currentLang.section_scooters,
       id: "/#trotinete-electrice",
       hasLine: false,
     },
     {
-      name: "Servicii",
-      id: "/#sservicii",
+      name: currentLang.section_services,
+      id: "/#servicii",
       hasLine: false,
     },
     {
-      name: "Reguli de bun simt",
+      name: currentLang.section_rules,
       id: "/#reguli-de-bun-simt",
       hasLine: false,
     },
     {
-      name: "Contacteaza-ne",
+      name: currentLang.section_contact,
       id: "/contacts",
       hasLine: false,
     },
   ]);
-
+  useEffect(() => {
+    setMenuState([
+      {
+        name: currentLang.section_about,
+        id: "/#despre-noi",
+        hasLine: false,
+      },
+      {
+        name: currentLang.section_atv,
+        id: "/#atv-uri",
+        hasLine: false,
+      },
+      {
+        name: currentLang.section_scooters,
+        id: "/#trotinete-electrice",
+        hasLine: false,
+      },
+      {
+        name: currentLang.section_services,
+        id: "/#servicii",
+        hasLine: false,
+      },
+      {
+        name: currentLang.section_rules,
+        id: "/#reguli-de-bun-simt",
+        hasLine: false,
+      },
+      {
+        name: currentLang.section_contact,
+        id: "/contacts",
+        hasLine: false,
+      },
+    ])
+  },[currentLang])
   const formatMenuStateArray = (menuItems, target, bool) => {
     const menuArray = [...menuItems];
 
@@ -64,6 +98,11 @@ const Menu = () => {
 
     setMenuState(formatMenuStateArray(menuState, menuIndex, false));
   };
+
+  const handleLangSwitch = (e) => {
+    const id = e.target.id
+    setLang(id)
+  }
 
   const handleClick = (e, id) => {
       e.preventDefault()
@@ -108,6 +147,12 @@ const Menu = () => {
           </div>
         </Link>
         {renderMenuItems()}
+        <div className={styles.devider}></div>
+        <div className={styles.langSwitch}>
+            <div className={`pointer ${lang === 'en' && styles.brandColor}`} onClick={handleLangSwitch} id={'en'} >EN</div>
+            <div>/</div>
+            <div className={`pointer ${lang === 'ro' && styles.brandColor}`} onClick={handleLangSwitch} id={'ro'}>RO</div>
+        </div>
       </div>
     )
   }
