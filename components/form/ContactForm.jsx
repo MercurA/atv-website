@@ -32,8 +32,8 @@ const ContactForm = ({handleSubmit}) => {
     }
 
     return (
-            <div className={styles.formContainer}>
-                <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit}>
+                    <div className={styles.formContainer}>
                     <div className={styles.description}>
                         <h3 className={styles.descItems}>{currentLang.input.helpDescriptionTitle}</h3>
                         <div >{currentLang.input.helpDescriptionText}</div>
@@ -44,10 +44,10 @@ const ContactForm = ({handleSubmit}) => {
                         <Input name={currentLang.input.noTelephone} id={'telephone'} placeholder={'Ex. 004074123123'} handleOnChange={handleChange} />
                         <Input name={currentLang.input.resDate} id={'reservation'} placeholder={'Ex. zi/luna/an'} handleOnChange={handleChange} type={'date'} />
                         <Textarea name={currentLang.input.message} id={'message'} placeholder={currentLang.input.placeholderMessage} handleOnChange={handleChange} />
-                        <Button name={currentLang.send} handleClick={handleSubmit} type={"submit"} size={'btn_md'}/>
+                        <Button name={currentLang.send} type={"submit"} size={'btn_md'}/>
                     </div>
-                </form>
             </div>
+            </form>
     )
 }
 
