@@ -5,8 +5,9 @@ import Textarea from '../inputs/Textarea'
 import Button from '../button/Button'
 import { useContext } from 'react'
 import { LanguageContext } from '../../pages/_app'
+import postEmail from '../../services/email'
 
-const ContactForm = ({handleSubmit}) => {
+const ContactForm = () => {
     const {currentLang, setLang} = useContext(LanguageContext)
     const [formData, setFormData] = useState({})
     const [emailResponse, setEmailResponse] = useState('')
