@@ -13,18 +13,18 @@ const ContactForm = ({handleSubmit}) => {
     
     const onSubmit = async (e) => {
         e.preventDefault();
-        clearForm(true);
+        console.log(formData)
         const res = await postEmail({
             to_name: formData.name,
-            message: formData['Write something'],
+            message: formData.message,
             from_name: formData.email
         })
+        console.log(res)
         setEmailResponse(res)
+        setFormData({});
     }
 
     const handleChange = (e) => {
-        console.log(e.target.value)
-        console.log(e.target.name)
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
