@@ -3,6 +3,9 @@ import { init } from 'emailjs-com';
 init(process.env.NEXT_PUBLIC_USER_ID);
 
 function postEmail(formData) {
+
+  console.log(process.env.TEMPLATE_ID)
+  console.log(process.env.NEXT_PUBLIC_TEMPLATE_ID)
   const data = {
     service_id: process.env.SERVICE_ID,
     template_id: process.env.TEMPLATE_ID,
