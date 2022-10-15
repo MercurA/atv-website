@@ -1,5 +1,5 @@
-import strings_RO from '../../constants/strings'
 import styles from './styles.module.scss'
+import Image from 'next/image'
 
 const Button = ({ name, type, handleClick, id, size = 'small', variant = "outlined", primary, secondary, fSize, fFamily, icon = null }) => {
     const buttonSize = {
