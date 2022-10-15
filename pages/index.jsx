@@ -39,7 +39,7 @@ const MainPage = () => {
       <div className={styles.atvList}>
         {/* <div className={styles.horizontalScroll}> */}
           {atv_list.map((item, index) => (
-            <SmallCard atv={item} index={index}/>
+            <SmallCard atv={item} index={index} key={index}/>
           ))}
         {/* </div> */}
       </div>
