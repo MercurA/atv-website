@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import dynamic from "next/dynamic"
 
-import ContactForm from '../components/form/Form'
+import ContactForm from '../components/form/ContactForm'
 import styles from './styles.module.scss'
 
 const MapRender = dynamic(() => import("../components/map/Map"), { ssr:false })

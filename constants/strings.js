@@ -25,7 +25,8 @@ const translation = {
             vehicle: 'Vehicul rezervat',
             message: 'Mesaj',
             helpDescriptionTitle: 'Cum te putem` ajuta?',
-            helpDescriptionText: 'Pentru a stabili detaliile unei rezervari, pentru a-ti da mai multe detalii despre un traseu, pentru a afla care sunt costurile unei inchirieri de ATV/trotineta,pentru a afla detalii despre disponibilitatea ATV-urilor/trotinetelor noastre, pentru a te informa care este politica de confidentialitate, pentru a-ti prezenta care sunt termenii ci conditiile noastre sau un simplu “Salut”, trimite-ne un mesaj.'
+            helpDescriptionText: 'Pentru a stabili detaliile unei rezervari, pentru a-ti da mai multe detalii despre un traseu, pentru a afla care sunt costurile unei inchirieri de ATV/trotineta,pentru a afla detalii despre disponibilitatea ATV-urilor/trotinetelor noastre, pentru a te informa care este politica de confidentialitate, pentru a-ti prezenta care sunt termenii ci conditiile noastre sau un simplu “Salut”, trimite-ne un mesaj.',
+            placeholderMessage: 'Buna, As vrea sa fac o rezervare...'
         },
         send: 'Trimite',
         atv_list:[
@@ -83,7 +84,8 @@ const translation = {
             vehicle: 'Vehicle reserved',
             message: 'Message',
             helpDescriptionTitle: 'How can we help?',
-            helpDescriptionText: 'To establish the details of a reservation, to give you more details about a route, to find out the costs of an ATV/scooter rental, to find out details about the availability of our ATVs/scooters, to inform you which is the privacy policy, to present you our terms and conditions or a simple "Hello", send us a message.'
+            helpDescriptionText: 'To establish the details of a reservation, to give you more details about a route, to find out the costs of an ATV/scooter rental, to find out details about the availability of our ATVs/scooters, to inform you which is the privacy policy, to present you our terms and conditions or a simple "Hello", send us a message.',
+            placeholderMessage: 'Hi, I would like to make a reservation...'
         },
         send: 'Send',
         atv_list:[
